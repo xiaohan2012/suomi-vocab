@@ -2,8 +2,32 @@
 html(ng-app="myApp")
   head
     meta(charset='utf8')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
     base(href='/')
-    title Angular Express Seed App
+    title Suomi Word List
     link(rel='stylesheet', href='/css/app.css')
+    link(rel='stylesheet', href='/js/lib/bootstrap/dist/css/bootstrap.min.css')
+
   body
-    block body
+    div.navbar.navbar-default
+      div.container
+        div.navbar-header
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand Suomi Vocabulary
+    
+        div.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href="/train") Train
+            li
+              a(href="/test") Test
+    
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="/list-management") List Management
+                
+    div.container
+      block content

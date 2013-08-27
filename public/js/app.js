@@ -10,16 +10,23 @@ angular.module('myApp', [
 ]).
 config(function ($routeProvider, $locationProvider) {
   $routeProvider.
-    when('/view1', {
-      templateUrl: 'partials/partial1',
-      controller: 'MyCtrl1'
+    when('/train', {
+	templateUrl: '/partials/train-index',
     }).
-    when('/view2', {
-      templateUrl: 'partials/partial2',
-      controller: 'MyCtrl2'
+    when('/train/:category', {
+      templateUrl: '/partials/train',
+      controller: 'TrainCtrl'
+    }).
+    when('/test', {
+      templateUrl: '/partials/test',
+      controller: 'TestCtrl'
+    }).
+    when('/list-management', {
+      templateUrl: '/partials/list-management',
+      controller: 'ListManagementCtrl'
     }).
     otherwise({
-      redirectTo: '/view1'
+      redirectTo: '/'
     });
 
   $locationProvider.html5Mode(true);

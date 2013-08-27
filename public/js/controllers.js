@@ -17,6 +17,15 @@ angular.module('myApp.controllers', []).
     });
 
   }).
+  controller('TrainCtrl', function ($scope) {
+      
+  }).
+  controller('TestCtrl', function ($scope) {
+      
+  }).
+  controller('ListManagementCtrl', function ($scope) {
+      
+  }).
   controller('MyCtrl1', function ($scope) {
     // write Ctrl here
 
